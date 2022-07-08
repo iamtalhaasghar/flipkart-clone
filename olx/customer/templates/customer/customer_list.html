@@ -1,0 +1,13 @@
+<h1>Customer Lists</h1>
+
+<ul>
+{% for customer in customer_list %}
+
+<li>{{customer.id}} - {{customer.name}}
+    <a href="{% url 'customer-detail' customer.id %}">Detail</a>
+    <a href="{% url 'customer-update' customer.id %}">Update</a>
+    <a href="{% url 'customer-delete' customer.id %}">Delete</a>
+</li>
+
+{% endfor %}
+</ul>
